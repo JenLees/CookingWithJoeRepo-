@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="CookingWithJoe">
+<head>
+    <title>Cooking With Joe</title>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.amelia.css" rel="stylesheet" />
+
+</head>
+<body ng-controller="AccountController as account">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/index" class="navbar-brand" style="font-size:36px">
+                    Cooking With Joe
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/categories">Recipes</a></li>
+                    <li><a href="/reviews">Reviews</a></li>
+                    <li>
+                        <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
+                        <a href="#" ng-show="account.isLoggedIn()">Logout</a>@*isn't redirecting or showing as logged out*@
+                    </li> 
+                    <li>
+                    <a href='#' ng-show="account.isLoggedIn()">Hi, {{user.UserName}}</a>@*fix code so name shows up*@ 
+                    <a href='#' ng-show="!account.isLoggedIn()">Hi, Guest</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <ng-view></ng-view>
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Cooking With Joe</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/angular.js"></script>
+    @*<script src="~/Scripts/angular.min.js"></script>*@
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="~/ngApp/app.js"></script>
+    <script src="~/ngApp/controllers.js"></script>
+    <script src="~/ngApp/services.js"></script>
+
+</body>
+</html>

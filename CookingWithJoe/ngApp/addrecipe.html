@@ -1,0 +1,40 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form role="form" ng-submit="vm.saveRecipe()">
+                <div class="form-group">
+
+                    <label for="recipename" style="padding-top:18px">
+                        Recipe Name:
+                    </label>
+                    <input type="text" class="form-control" ng-model="vm.recipeToAdd.recipename" id="recipename" placeholder="recipe name" />
+                </div>
+
+                <div>
+                    <label for="ingredientslist" style="padding-top:18px">
+                        List of Ingredients:
+                    </label>
+                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.ingredients" id="ingredientslist" placeholder="ingredients"></textarea>
+                </div>
+
+                <div>
+                    <label for="directions" style="padding-top:18px">
+                        Directions:
+                    </label>
+                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.directions" id="directions" placeholder="directions"></textarea>
+                </div>
+                <div>
+                    <label for="category" style="padding-top:18px">
+                        Category:
+                    </label>
+                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.category" id="category" placeholder="category"></textarea>
+                </div>
+                <div style="padding:25px">
+                    <input type="submit" class="btn btn-default" value="Submit" />
+                    <a class="btn btn-primary" href="/edit" value="Edit">Edit</a>
+                    <a class="btn btn-primary" href="/delete" value="Delete">Delete</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

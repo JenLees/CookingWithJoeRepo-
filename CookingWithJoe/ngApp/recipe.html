@@ -1,0 +1,18 @@
+﻿<div>
+    <ul>
+        <li ng-repeat="recipe in vm.recipes">
+            {{recipe.recipeName}}
+
+            {{recipe.ingredients}}
+            {{recipe.directions}}
+            {{recipe.category}}
+            <a href="/edit/{{recipe.id}}" ng-show="account.isLoggedIn()">edit</a>
+            <a href="/delete/{{recipe.id}}" ng-show="account.isLoggedIn()">delete</a>
+        </li>
+
+        <!--style page to look nicer :) -->
+    </ul>
+
+</div>
+
+
