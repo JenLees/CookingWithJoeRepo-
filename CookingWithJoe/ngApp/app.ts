@@ -7,7 +7,7 @@
 
             }).when('/index', {
                 templateUrl: '/ngApp/home.html',
-            
+
             }).when('/edit/:id', {
                 templateUrl: '/ngApp/edit.html',
                 controller: 'RecipeEditController as vm'
@@ -40,7 +40,7 @@
 
             }).when('/categories', {
                 templateUrl: '/ngApp/categories.html',
-               
+
 
             });
 
@@ -78,4 +78,4 @@
         $httpProvider.interceptors.push('authInterceptor');
     });;
 
-} 
+}

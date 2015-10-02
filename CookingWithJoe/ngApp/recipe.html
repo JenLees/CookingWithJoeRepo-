@@ -1,18 +1,21 @@
-﻿<div>
-    <ul>
-        <li ng-repeat="recipe in vm.recipes">
-            {{recipe.recipeName}}
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="centerDiv"  ng-repeat="recipe in vm.recipes">
+                <p>
+                    <div style="padding: 5px 12px 5px 12px">
+                        <h2>{{recipe.recipeName}}</h2>
+                        Ingredients:
+                        {{recipe.ingredients}}<br />
+                        Directions:
+                        {{recipe.directions}}<br />
+                        Category: {{recipe.category}}<br />
 
-            {{recipe.ingredients}}
-            {{recipe.directions}}
-            {{recipe.category}}
-            <a href="/edit/{{recipe.id}}" ng-show="account.isLoggedIn()">edit</a>
-            <a href="/delete/{{recipe.id}}" ng-show="account.isLoggedIn()">delete</a>
-        </li>
-
-        <!--style page to look nicer :) -->
-    </ul>
-
+                        <a href="/edit/{{recipe.id}}" ng-show="account.isLoggedIn()">edit</a>
+                        <a href="/delete/{{recipe.id}}" ng-show="account.isLoggedIn()">delete</a>
+                    </div>
+                          </p>
+            </div>
+        </div>
+    </div>
 </div>
-
-

@@ -46,7 +46,7 @@ namespace CookingWithJoe.API
                 else
                 {
                     var original = _db.Recipes.Find(recipe.Id);
-                    //original.Image = recipe.Image;
+                    original.Image = recipe.Image;
                     original.RecipeName = recipe.RecipeName;
                     original.Ingredients = recipe.Ingredients;
                     original.Directions = recipe.Directions;

@@ -280,6 +280,10 @@
     <Compile Include="Migrations\201509280636321_enableCors.Designer.cs">
       <DependentUpon>201509280636321_enableCors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510012142439_newStuff.cs" />
+    <Compile Include="Migrations\201510012142439_newStuff.Designer.cs">
+      <DependentUpon>201510012142439_newStuff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -321,9 +325,12 @@
     <Content Include="Content\healthy-lunch-ideas-for-weight-loss.jpg" />
     <Content Include="Content\holidays.jpg" />
     <Content Include="Content\ingredients.png" />
+    <Content Include="Content\isotope-docs.css" />
     <Content Include="Content\jenwithcream.png" />
+    <Content Include="Content\jquery.gridster.css" />
     <Content Include="Content\mashedpotatoesandcookingchicken.png" />
     <Content Include="Content\moreingredients.png" />
+    <Content Include="Content\pinbox.css" />
     <Content Include="Content\preparingcookiesheet.png" />
     <Content Include="Content\Red_Hawaiian_Shirt.PNG" />
     <Content Include="Content\slicedbusquits.png" />
@@ -353,6 +360,7 @@
     <Content Include="ngApp\login.html" />
     <Content Include="ngApp\recipe.html" />
     <Content Include="ngApp\register.html" />
+    <Content Include="Scripts\angular-masonry.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
@@ -391,15 +399,28 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include=".bin\node.cmd" />
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\gridster\Gruntfile.js" />
+    <Content Include="Scripts\gridster\jquery.collision.js" />
+    <Content Include="Scripts\gridster\jquery.coords.js" />
+    <Content Include="Scripts\gridster\jquery.draggable.js" />
+    <Content Include="Scripts\gridster\jquery.gridster.extras.js" />
+    <Content Include="Scripts\gridster\jquery.gridster.js" />
+    <Content Include="Scripts\gridster\utils.js" />
+    <Content Include="Scripts\isotope-docs.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.pinbox.js" />
+    <Content Include="Scripts\jquery.pinbox.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\masonry.pkgd.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -464,6 +485,9 @@
     <EmbeddedResource Include="Migrations\201509280636321_enableCors.resx">
       <DependentUpon>201509280636321_enableCors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510012142439_newStuff.resx">
+      <DependentUpon>201510012142439_newStuff.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ngApp\app.ts" />
@@ -477,6 +501,8 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\main-bower-files\main-bower-files.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
