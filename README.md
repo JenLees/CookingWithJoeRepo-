@@ -5,13 +5,22 @@ Entity Framework, and Visual Studio
 
 TODO:
 Add server side form validation
+
 Add client side form validation for recipes
+
 Add reviews model, view, etc.
+
 Fix user name to show up on navbar if logged in
+
 Show errors when password doesn't match requirements on registration
+
 Show error when password confirmation doesn't match on registration
+
 Show error when user tried to login with an invalid email or password
+
 Add the abitlity to upload pictures and videos
+
 Add filter function for recipes  
+
 Add search function for recipes and reviews
 
