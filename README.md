@@ -1,6 +1,6 @@
 # CookingWithJoeRepo-
 This is my individual web app project for Coder Camps. It demonstrates the following knowledge and skills:
-ASP. NET MVC, HTML 3, CSS 3, Bootstrap, TypesScript, Jquery, JSON, Ajax, JavaScript, C#, API, Identity 2.0, SQL Server, 
+ASP. NET MVC, HTML 3, CSS 3, Bootstrap, TypeScript, Jquery, JSON, Ajax, JavaScript, C#, API, Identity 2.0, SQL Server, 
 Entity Framework, and Visual Studio
 
 TODO:
