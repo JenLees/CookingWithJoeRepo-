@@ -26,6 +26,7 @@ namespace CookingWithJoe.Models
         {
         }
         public IDbSet<Recipe> Recipes { get; set; }
+        public IDbSet<Review> Reviews { get; set; }
 
         public static ApplicationDbContext Create()
         {

@@ -5871,9 +5871,9 @@ legend {
 
 .centerDiv { 
     width: 55%; 
-    height:200px; 
+    height:auto; 
     margin: 0 auto; 
-    background-color:#8bc6c9 ; 
+    background-color:#8bc6c9 ;
 
 }
 .ng-invalid.ng-touched {

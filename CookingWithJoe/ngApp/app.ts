@@ -24,6 +24,22 @@
                 templateUrl: '/ngApp/recipe.html',
                 controller: 'RecipeListController as vm'
 
+            }).when('/editreview/:id', {
+                templateUrl: '/ngApp/editreview.html',
+                controller: 'ReviewEditController as vm'
+
+            }).when('/deletereview/:id', {
+                templateUrl: '/ngApp/deletereview.html',
+                controller: 'ReviewDeleteController as vm'
+
+            }).when('/addreview', {
+                templateUrl: '/ngApp/addreview.html',
+                controller: 'ReviewAddController as vm'
+
+            }).when('/reviews', {
+                templateUrl: '/ngApp/reviews.html',
+                controller: 'ReviewListController as vm'
+
             }).when('/login', {
                 templateUrl: '/ngApp/login.html',
                 controller: 'AccountController as vm'

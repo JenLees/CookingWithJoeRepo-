@@ -26,6 +26,36 @@
 
     }
 
-    angular.module('CookingWithJoe').service('recipeService', RecipeService);
+    angular.module('CookingWithJoe').service('RecipeService', RecipeService);
 
-};
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+        export class ReviewService {
+            private ReviewResource
+
+            public listReviews() {
+                return this.ReviewResource.query();
+            }
+
+            public getReview(id) {
+                return this.ReviewResource.get({ id: id });
+            }
+
+            public saveReview(review) {
+                return this.ReviewResource.save(review).$promise;
+            }
+
+            public deleteReview(id) {
+
+                return this.ReviewResource.delete({ id: id }).$promise;
+            }
+
+            constructor($resource: ng.resource.IResourceService) {
+                this.ReviewResource = $resource('/api/reviews/:id');
+            }
+
+        }
+
+        angular.module('CookingWithJoe').service('ReviewService', ReviewService);
+
+    };

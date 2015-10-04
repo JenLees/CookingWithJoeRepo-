@@ -1,0 +1,25 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form role="form" ng-submit="vm.editReview()">
+                <div class="form-group">
+
+                    <label for="productname" style="padding-top:18px">
+                        Product Name:
+                    </label>
+                    <input type="text" class="form-control" ng-model="vm.reviewToEdit.productname" id="productname" placeholder="product name" />
+                </div>
+
+                <div>
+                    <label for="productreview" style="padding-top:18px">
+                        Product Review:
+                    </label>
+                    <textarea type="text" class="form-control" ng-model="vm.reviewToEdit.productreview id" ingredientslist" placeholder="product review"></textarea>
+                </div>
+                <div style="padding:25px">
+                    <input type="submit" class="btn btn-default" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

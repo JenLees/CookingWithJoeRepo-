@@ -39,7 +39,7 @@
                         <a href="#" ng-show="account.isLoggedIn()">Logout</a>@*isn't redirecting or showing as logged out*@
                     </li> 
                     <li>
-                    <a href='#' ng-show="account.isLoggedIn()">Hi, {{User.UserName}}</a>@*fix code so name shows up*@ 
+                    <a href='#' ng-show="account.isLoggedIn()">Hi, Trader Joes Fan! You are logged in.</a>@*fix code so name shows up*@ 
                     <a href='#' ng-show="!account.isLoggedIn()">Hi, Guest</a>
                     </li>
 
@@ -55,16 +55,17 @@
             <p>&copy; @DateTime.Now.Year - Cooking With Joe</p>
         </footer>
     </div>
-  
+
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-route.min.js"></script>
-    <script src="~/Scripts/angular-resource.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
     <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/Scripts/filepicker.js"></script>
    
 
     <script src="~/ngApp/app.js"></script>
     <script src="~/ngApp/controllers.js"></script>
     <script src="~/ngApp/services.js"></script>
- 
+   
 </body>
 </html>

@@ -18,7 +18,13 @@
             ) { }
     }
 
-    angular.module('CookingWithJoe').controller('RecipeAddController', RecipeAddController);
+    angular.module('CookingWithJoe').controller('RecipeAddController', ['$http', function RecipeAddController($http) {
+        var vm = this;
+        $http.get('/api/recipes/').success(function (results) {
+            vm.reviews = results;
+        });
+    }]);
+}
 
     class RecipeEditController {
         public recipeToEdit
@@ -41,7 +47,15 @@
             this.recipeToEdit = recipeService.getRecipe(id);
         }
     }
-    angular.module('CookingWithJoe').controller('RecipeEditController', RecipeEditController);
+  
+    angular.module('CookingWithJoe').controller('RecipeEditController', ['$http', function RecipeEditController($http) {
+        var vm = this;
+        $http.get('/api/edit/').success(function (results) {
+            vm.reviews = results;
+        });
+    }]);
+
+
 
 
     class RecipeDeleteController {
@@ -65,7 +79,13 @@
             this.recipeToDelete = recipeService.getRecipe(id);
         }
     }
-    angular.module('CookingWithJoe').controller('RecipeDeleteController', RecipeDeleteController);
+    angular.module('CookingWithJoe').controller('RecipeDeleteController', ['$http', function RecipeDeleteController($http) {
+        var vm = this;
+        $http.get('/api/delete/').success(function (results) {
+            vm.reviews = results;
+        });
+    }]);
+
 
     class RecipeListController {
         public recipes
@@ -74,7 +94,111 @@
             this.recipes = recipeService.listRecipes();
         }
     }
-    angular.module('CookingWithJoe').controller('RecipeListController', RecipeListController);
+    angular.module('CookingWithJoe').controller('RecipeListController', ['$http', function RecipeListController($http) {
+        var vm = this;
+        $http.get('/api/recipes/').success(function (results) {
+        vm.recipes = results;
+    });
+}]);
+
+   
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    class ReviewAddController {
+        public reviewToAdd
+
+        public saveReview() {
+            this.reviewService.saveReview(this.reviewToAdd).then(
+                () => {
+                    this.$location.path('/');
+                }
+            );
+        }
+
+        constructor
+            (
+            private reviewService: CookingWithJoe.Services.ReviewService,
+            private $location: ng.ILocationService
+            ) { }
+    }
+
+    angular.module('CookingWithJoe').controller('ReviewAddController', ['$http', function ReviewAddController($http) {
+        var vm = this;
+        $http.get('/api/reviews/').success(function (results) {
+            vm.reviews = results;
+        });
+    }]);
+
+
+    class ReviewEditController {
+        public reviewToEdit
+
+        public editReview() {
+            this.reviewService.saveReview(this.reviewToEdit).then(
+                () => {
+                    this.$location.path('/');
+                }
+            );
+        }
+
+        constructor
+            (
+            private reviewService: CookingWithJoe.Services.ReviewService,
+            $routeParams: ng.route.IRouteParamsService,
+            private $location: ng.ILocationService
+            ) {
+            let id = $routeParams['id'];
+            this.reviewToEdit = reviewService.getReview(id);
+        }
+    }
+    angular.module('CookingWithJoe').controller('ReviewEditController', ReviewEditController);
+
+
+    class ReviewDeleteController {
+        public reviewToDelete
+
+        public deleteReview() {
+            this.reviewService.deleteReview(this.reviewToDelete.id).then(
+                () => {
+                    this.$location.path('/');
+                }
+            );
+        }
+
+        constructor
+            (
+            private reviewService: CookingWithJoe.Services.ReviewService,
+            $routeParams: ng.route.IRouteParamsService,
+            private $location: ng.ILocationService
+            ) {
+            let id = $routeParams['id'];
+            this.reviewToDelete = reviewService.getReview(id);
+        }
+    }
+    angular.module('CookingWithJoe').controller('ReviewDeleteController', ReviewDeleteController);
+    angular.module('CookingWithJoe').controller('RecipeDeleteController', ['$http', function RecipeDeleteController($http) {
+        var vm = this;
+        $http.get('/api/deletereview/').success(function (results) {
+            vm.reviews = results;
+        });
+    }]);
+
+
+    class ReviewListController {
+        public reviews
+
+        constructor(reviewService: CookingWithJoe.Services.ReviewService) {
+            this.reviews = reviewService.listReviews();
+        }
+    }
+    angular.module('CookingWithJoe').controller('ReviewListController', ['$http', function ReviewListController($http) {
+        var vm = this;
+        $http.get('/api/reviews/').success(function (results) {
+            vm.reviews = results;
+        });
+    }]);
+    
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const authenticateURL = '/Token';
@@ -121,8 +245,4 @@
     angular.module('CookingWithJoe').controller('AccountController', AccountController)
 
 
-  
  
-
- 
-}

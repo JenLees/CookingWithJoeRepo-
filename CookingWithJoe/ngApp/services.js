@@ -21,7 +21,28 @@ var CookingWithJoe;
             return RecipeService;
         })();
         Services.RecipeService = RecipeService;
-        angular.module('CookingWithJoe').service('recipeService', RecipeService);
+        angular.module('CookingWithJoe').service('RecipeService', RecipeService);
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        var ReviewService = (function () {
+            function ReviewService($resource) {
+                this.ReviewResource = $resource('/api/reviews/:id');
+            }
+            ReviewService.prototype.listReviews = function () {
+                return this.ReviewResource.query();
+            };
+            ReviewService.prototype.getReview = function (id) {
+                return this.ReviewResource.get({ id: id });
+            };
+            ReviewService.prototype.saveReview = function (review) {
+                return this.ReviewResource.save(review).$promise;
+            };
+            ReviewService.prototype.deleteReview = function (id) {
+                return this.ReviewResource.delete({ id: id }).$promise;
+            };
+            return ReviewService;
+        })();
+        Services.ReviewService = ReviewService;
+        angular.module('CookingWithJoe').service('ReviewService', ReviewService);
     })(Services = CookingWithJoe.Services || (CookingWithJoe.Services = {}));
 })(CookingWithJoe || (CookingWithJoe = {}));
 ;

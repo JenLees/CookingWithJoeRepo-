@@ -1,0 +1,38 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form role="form" ng-submit="vm.saveReview()">
+
+                <div class="form-group">
+
+                    <label for="productname" style="padding-top:18px">
+                        Product Name:
+                    </label>
+                    <input type="text" class="form-control" ng-model="vm.reviewToAdd.productname" id="productname" placeholder="product name" />
+                </div>
+
+                <div>
+                    <label for="productreview" style="padding-top:18px">
+                       Your Review - tell us what you think:
+                    </label>
+                    <textarea type="textarea" class="form-control" ng-model="vm.reviewToAdd.productreview" id="productreview" placeholder="your review"></textarea>
+                </div>
+                <div>
+                    <label for="upload" style="padding-top:18px">
+                        To upload an image or video, click the button below:
+                    </label>
+                </div>
+                <div style="padding:18px">
+                    <input type="filepicker" data-fp-apikey="AWctN1EllTgir5z1zjwbqz"
+                           onchange="alert(event.fpfile.url)">
+                </div>
+                <div style="padding:25px">
+                    <input type="submit" class="btn btn-default" value="Submit" />
+                    <a class="btn btn-primary" href="/editreview" value="Edit">Edit</a>
+                    <a class="btn btn-primary" href="/deletereview" value="Delete">Delete</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
