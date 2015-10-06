@@ -6,19 +6,19 @@ Entity Framework, and Visual Studio
 TODO:
 Add server side form validation
 
-Add client side form validation for recipes
+Add client side form validation for recipes - DONE
 
-Add reviews model, view, etc.
+Add reviews model, view, etc. - DONE
 
-Fix user name to show up on navbar if logged in
+Fix user name to show up on navbar if logged in - Done...sort of 
 
 Show errors when password doesn't match requirements on registration
 
 Show error when password confirmation doesn't match on registration
 
-Show error when user tried to login with an invalid email or password
+Show error when user tries to login with an invalid email or password
 
-Add the abitlity to upload pictures and videos
+Add the abitlity to upload pictures and videos - Done but not working on live site (because of 3rd party app?)
 
 Add filter function for recipes  
 
