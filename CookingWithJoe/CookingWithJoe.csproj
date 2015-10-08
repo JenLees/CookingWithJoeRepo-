@@ -469,10 +469,6 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
-    <None Include="Properties\PublishProfiles\cookingwithjoe %282%29.pubxml" />
-    <None Include="Properties\PublishProfiles\cookingwithjoe %283%29.pubxml" />
-    <None Include="Properties\PublishProfiles\cookingwithjoe %284%29.pubxml" />
-    <None Include="Properties\PublishProfiles\cookingwithjoe %285%29.pubxml" />
     <None Include="Properties\PublishProfiles\cookingwithjoe.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\filepicker.js" />
