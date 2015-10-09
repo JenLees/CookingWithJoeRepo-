@@ -45,6 +45,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="DefaultConnection-Deployment" Order="1">
+          <Destination Path="Server=tcp:t52pnllh4o.database.windows.net,1433%3bDatabase=cookingwithjoe%3bUser ID=jenlees%40t52pnllh4o%3bPassword=H!ckoryw00d%3bTrusted_Connection=False%3bEncrypt=True%3bConnection Timeout=30%3b" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28LocalDb%29\MSSQLLocalDB%3bAttachDbFilename=|DataDirectory|\aspnet-CookingWithJoe-20150927122710.mdf%3bInitial Catalog=aspnet-CookingWithJoe-20150927122710%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\DefaultConnection-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -95,6 +106,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
@@ -317,6 +329,14 @@
     <Compile Include="Migrations\201510040506431_editreviews.cs" />
     <Compile Include="Migrations\201510040506431_editreviews.Designer.cs">
       <DependentUpon>201510040506431_editreviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510090014569_picture.cs" />
+    <Compile Include="Migrations\201510090014569_picture.Designer.cs">
+      <DependentUpon>201510090014569_picture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510090157209_changedSeedPic.cs" />
+    <Compile Include="Migrations\201510090157209_changedSeedPic.Designer.cs">
+      <DependentUpon>201510090157209_changedSeedPic.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -1246,6 +1266,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\Site.css" />
@@ -1312,6 +1333,12 @@
     <EmbeddedResource Include="Migrations\201510040506431_editreviews.resx">
       <DependentUpon>201510040506431_editreviews.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510090014569_picture.resx">
+      <DependentUpon>201510090014569_picture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510090157209_changedSeedPic.resx">
+      <DependentUpon>201510090157209_changedSeedPic.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ngApp\app.ts" />
@@ -1330,6 +1357,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
