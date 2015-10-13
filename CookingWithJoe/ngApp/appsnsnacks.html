@@ -1,0 +1,53 @@
+﻿
+<div class="container">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="/breakfast">Breakfast</a>
+            </li>
+            <li class="active">
+                <a href="/lunch">Lunch</a>
+            </li>
+            <li class="active">
+                <a href="/dinner">Dinner</a>
+            </li>
+            <li class="active">
+                <a href="/appsnsnacks">Appetizers/Snacks</a>
+            </li>
+            <li class="active">
+                <a href="/desserts">Desserts</a>
+            </li>
+            <li class="active">
+                <a href="/holidays">Holidays</a>
+            </li>
+            <li class="active">
+                <a href="/recipes">All Recipes</a>
+            </li>
+            <li class="active">
+                <a href="/addrecipe">Add A Recipe</a>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+            <div class="thumbnail" ng-repeat="recipe in vm.recipes | filter:{category:'appsnsnacks'}">
+                <p>
+                    <div style="padding: 5px 12px 5px 12px">
+                        <h2>{{recipe.recipeName}}</h2>
+                        <h4> Ingredients:</h4>
+                        {{recipe.ingredients}}
+                        <br />
+                        <h4>Directions:</h4>
+                        {{recipe.directions}}
+                        <br />
+                        <h5>Category: {{recipe.category}}</h5>
+                        <br />
+
+                        <a href="/edit/{{recipe.id}}" ng-show="account.isLoggedIn()">edit</a>
+                        <a href="/delete/{{recipe.id}}" ng-show="account.isLoggedIn()">delete</a>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -26,7 +26,7 @@
 
     }
 
-    angular.module('CookingWithJoe').service('RecipeService', RecipeService);
+    angular.module('CookingWithJoe').service('recipeService', RecipeService);
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     
@@ -56,6 +56,6 @@
 
         }
 
-        angular.module('CookingWithJoe').service('ReviewService', ReviewService);
+        angular.module('CookingWithJoe').service('reviewService', ReviewService);
 
     };

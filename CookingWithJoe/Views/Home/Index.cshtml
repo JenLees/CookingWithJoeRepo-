@@ -36,13 +36,13 @@
                     <li><a href="/reviews">Reviews</a></li>
                     <li>
                         <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
-                        <a href="#" ng-show="account.isLoggedIn()">Logout</a>@*isn't redirecting or showing as logged out*@
+                        <a href="/logout" ng-show="account.isLoggedIn()">Logout</a>
                     </li> 
                     <li>
                     <a href='#' ng-show="account.isLoggedIn()">Hi, Trader Joes Fan! You are logged in.</a>@*fix code so name shows up*@ 
                     <a href='#' ng-show="!account.isLoggedIn()">Hi, Guest</a>
                     </li>
-
+                  
                 </ul>
             </div>
         </div>
@@ -60,8 +60,7 @@
     <script src="~/Scripts/angular-route.min.js"></script>
     <script src="~/Scripts/angular-resource.min.js"></script>
     <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
-    <script src="~/Scripts/filepicker.js"></script>
-   
+
 
     <script src="~/ngApp/app.js"></script>
     <script src="~/ngApp/controllers.js"></script>

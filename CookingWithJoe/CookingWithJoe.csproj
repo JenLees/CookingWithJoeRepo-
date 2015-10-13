@@ -338,6 +338,18 @@
     <Compile Include="Migrations\201510090157209_changedSeedPic.Designer.cs">
       <DependentUpon>201510090157209_changedSeedPic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510130544182_messingwithstuff.cs" />
+    <Compile Include="Migrations\201510130544182_messingwithstuff.Designer.cs">
+      <DependentUpon>201510130544182_messingwithstuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510130549058_messingwithstuff1.cs" />
+    <Compile Include="Migrations\201510130549058_messingwithstuff1.Designer.cs">
+      <DependentUpon>201510130549058_messingwithstuff1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510130606589_morestuff.cs" />
+    <Compile Include="Migrations\201510130606589_morestuff.Designer.cs">
+      <DependentUpon>201510130606589_morestuff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -345,6 +357,12 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\Review.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -356,6 +374,138 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\CookingWithJoe.dll" />
+    <Content Include="bin\CookingWithJoe.pdb" />
+    <Content Include="bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\de\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\de\System.Spatial.resources.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\es\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\es\System.Spatial.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\fr\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\fr\System.Spatial.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\it\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\it\System.Spatial.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ja\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\ja\System.Spatial.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ko\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\ko\System.Spatial.resources.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.Azure.KeyVault.Core.dll" />
+    <Content Include="bin\Microsoft.Azure.KeyVault.Core.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Data.Edm.dll" />
+    <Content Include="bin\Microsoft.Data.Edm.xml" />
+    <Content Include="bin\Microsoft.Data.OData.dll" />
+    <Content Include="bin\Microsoft.Data.OData.xml" />
+    <Content Include="bin\Microsoft.Data.Services.Client.dll" />
+    <Content Include="bin\Microsoft.Data.Services.Client.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="bin\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Ninject.dll" />
+    <Content Include="bin\Ninject.Web.Common.dll" />
+    <Content Include="bin\Ninject.Web.Common.xml" />
+    <Content Include="bin\Ninject.Web.WebApi.dll" />
+    <Content Include="bin\Ninject.Web.WebApi.WebHost.dll" />
+    <Content Include="bin\Ninject.Web.WebApi.WebHost.xml" />
+    <Content Include="bin\Ninject.Web.WebApi.xml" />
+    <Content Include="bin\Ninject.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\ru\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\ru\System.Spatial.resources.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Spatial.dll" />
+    <Content Include="bin\System.Spatial.xml" />
+    <Content Include="bin\System.Web.Cors.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Http.Cors.dll" />
+    <Content Include="bin\System.Web.Http.Cors.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.Owin.dll" />
+    <Content Include="bin\System.Web.Http.Owin.xml" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebActivatorEx.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\x86\Debug\cookingwithjoe.csproj.vshost.exe" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="bin\zh-Hant\System.Spatial.resources.dll" />
     <Content Include="Content\bisquits.png" />
     <Content Include="Content\bluberrybisquits.png" />
     <Content Include="Content\boilingpotatoes.png" />
@@ -410,17 +560,30 @@
     <Content Include="ngApp\about.html" />
     <Content Include="ngApp\addrecipe.html" />
     <Content Include="ngApp\addreview.html" />
+    <Content Include="ngApp\app.js" />
+    <Content Include="ngApp\appsnsnacks.html" />
     <Content Include="ngApp\categories.html" />
     <Content Include="ngApp\contact.html" />
+    <Content Include="ngApp\controllers.js" />
     <Content Include="ngApp\delete.html" />
     <Content Include="ngApp\deletereview.html" />
+    <Content Include="ngApp\desserts.html" />
+    <Content Include="ngApp\dinner.html" />
     <Content Include="ngApp\edit.html" />
     <Content Include="ngApp\editreview.html" />
+    <Content Include="ngApp\holidays.html" />
     <Content Include="ngApp\home.html" />
     <Content Include="ngApp\login.html" />
-    <Content Include="ngApp\recipe.html" />
+    <Content Include="ngApp\logout.html" />
+    <Content Include="ngApp\breakfast.html" />
+    <Content Include="ngApp\lunch.html" />
+    <Content Include="ngApp\recipes.html" />
     <Content Include="ngApp\register.html" />
     <Content Include="ngApp\reviews.html" />
+    <Content Include="ngApp\services.js" />
+    <Content Include="obj\Debug\CookingWithJoe.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CookingWithJoe.dll" />
+    <Content Include="obj\Debug\CookingWithJoe.pdb" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -489,6 +652,19 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="bin\CookingWithJoe.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\CookingWithJoe.csproj.GenerateResource.Cache" />
+    <Content Include="obj\Debug\CookingWithJoe.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="ngApp\app.js.map" />
+    <Content Include="ngApp\controllers.js.map" />
+    <Content Include="ngApp\services.js.map" />
+    <None Include="obj\Debug\__TestProfilesForFilePreview__\cookingwithjoe %284%29.pubxml" />
+    <None Include="obj\Debug\__TestProfilesForFilePreview__\cookingwithjoe.pubxml" />
     <None Include="Properties\PublishProfiles\cookingwithjoe.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\filepicker.js" />
@@ -1283,6 +1459,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Debug\__testMsDeployConnection__\" />
+    <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1339,6 +1518,30 @@
     <EmbeddedResource Include="Migrations\201510090157209_changedSeedPic.resx">
       <DependentUpon>201510090157209_changedSeedPic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510130544182_messingwithstuff.resx">
+      <DependentUpon>201510130544182_messingwithstuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510130549058_messingwithstuff1.resx">
+      <DependentUpon>201510130549058_messingwithstuff1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510130606589_morestuff.resx">
+      <DependentUpon>201510130606589_morestuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.addedCategory.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.changedModel.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.editreviews.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.enableCors.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.errorFix.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.fixedKernelBind.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.fixedTypo.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.lateatnight.resources" />
+    <EmbeddedResource Include="obj\Debug\cookingwithjoe.Migrations.lotsofstuff.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.newStuff.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.nightFixes.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.reviews.resources" />
+    <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.start.resources" />
+    <EmbeddedResource Include="obj\Debug\cookingwithjoe.Migrations.stuff.resources" />
+    <EmbeddedResource Include="obj\Debug\cookingwithjoe.Migrations.updatedController.resources" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ngApp\app.ts" />

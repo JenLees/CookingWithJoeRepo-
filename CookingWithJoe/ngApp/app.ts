@@ -20,8 +20,32 @@
                 templateUrl: '/ngApp/addrecipe.html',
                 controller: 'RecipeAddController as vm'
 
-            }).when('/recipe', {
-                templateUrl: '/ngApp/recipe.html',
+            }).when('/recipes', {
+                templateUrl: '/ngApp/recipes.html',
+                controller: 'RecipeListController as vm'
+
+            }).when('/breakfast', {
+                templateUrl: '/ngApp/breakfast.html',
+                controller: 'RecipeListController as vm'
+
+            }).when('/lunch', {
+                templateUrl: '/ngApp/lunch.html',
+                controller: 'RecipeListController as vm'
+
+            }).when('/dinner', {
+                templateUrl: '/ngApp/dinner.html',
+                controller: 'RecipeListController as vm'
+
+            }).when('/desserts', {
+                templateUrl: '/ngApp/desserts.html',
+                controller: 'RecipeListController as vm'
+
+            }).when('/appsnsnacks', {
+                templateUrl: '/ngApp/appsnsnacks.html',
+                controller: 'RecipeListController as vm'
+
+            }).when('/holidays', {
+                templateUrl: '/ngApp/holidays.html',
                 controller: 'RecipeListController as vm'
 
             }).when('/editreview/:id', {
@@ -44,6 +68,10 @@
                 templateUrl: '/ngApp/login.html',
                 controller: 'AccountController as vm'
 
+            }).when('/logout', {
+                templateUrl: '/ngApp/logout.html',
+                controller: 'AccountController as vm'
+
             }).when('/register', {
                 templateUrl: '/ngApp/register.html',
                 controller: 'AccountController as vm'
@@ -64,6 +92,7 @@
 
         });
 
+//////////////////////////////////////////////////////////////////////////////////////
 
 
     angular.module('CookingWithJoe').factory('authInterceptor', (

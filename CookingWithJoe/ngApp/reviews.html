@@ -2,18 +2,20 @@
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-8">
             <div class="thumbnail" ng-repeat="review in vm.reviews">
-                <p>
+             
                     <div style="padding: 5px 12px 5px 12px">
                         <h2>{{review.productName}}</h2>
                         <h4>Product Review:</h4>
                         {{review.productReview}}
                         <br />
-                       
+    
+                <div><br/>
+                    <a class="btn btn-primary btn-sm" ng-click="vm.reviewToAdd" href="/addreview">Add Your Own Review!</a><br/>
+                    <a href="/editreview/{{review.id}}" ng-show="account.isLoggedIn()">edit</a>
+                    <a href="/deletereview/{{review.id}}" ng-show="account.isLoggedIn()">delete</a>
+                </div>
+                </div>
 
-                        <a href="/editreview/{{review.id}}" ng-show="account.isLoggedIn()">edit</a>
-                        <a href="/deletereview/{{review.id}}" ng-show="account.isLoggedIn()">delete</a>
-                    </div>
-                </p>
             </div>
         </div>
     </div>

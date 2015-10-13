@@ -1,37 +1,43 @@
 ﻿<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <form role="form" ng-submit="vm.saveRecipe()">
+            <form name="recipeAddForm" role="form" novalidate ng-submit="vm.saveRecipe()">
              
                 <div class="form-group">
-
                     <label for="recipename" style="padding-top:18px">
                         Recipe Name:
                     </label>
-                    <input type="text" class="form-control" ng-model="vm.recipeToAdd.recipename" id="recipename" placeholder="recipe name" />
+                    <input type="text" class="form-control" ng-model="vm.recipeToAdd.recipename" name="recipename" placeholder="recipe name" required />
+                    <span ng-show="recipeAddForm.recipename.$touched && recipeAddForm.recipename.$error.required"
+                          class="has-error help-block">Recipe name is required!</span>
                 </div>
 
                 <div>
-                    <label for="ingredientslist" style="padding-top:18px">
+                    <label  for="ingredientslist" style="padding-top:18px">
                         List of Ingredients:
                     </label>
-                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.ingredients" id="ingredientslist" placeholder="ingredients"></textarea>
+                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.ingredients" name="ingredientslist" placeholder="ingredients" required></textarea>
+                    <span ng-show="recipeAddForm.ingredientslist.$touched && recipeAddForm.ingredientslist.$error.required"
+                          class="has-error help-block">Ingredients are required!</span>
                 </div>
-
                 <div>
-                    <label for="directions" style="padding-top:18px">
+                    <label  for="directions" style="padding-top:18px">
                         Directions:
                     </label>
-                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.directions" id="directions" placeholder="directions"></textarea>
+                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.directions" name="directions" placeholder="directions" required></textarea>
+                    <span ng-show="recipeAddForm.directions.$touched && recipeAddForm.directions.$error.required"
+                          class="has-error help-block">Directions are required!</span>
                 </div>
                 <div>
                     <label for="category" style="padding-top:18px">
-                        Category:
+                        Category (please choose Breakfast, Lunch, Dinner, Snacks and Appetizers, Desserts, or Holidays):
                     </label>
-                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.category" id="category" placeholder="category"></textarea>
-                </div>
+                    <textarea type="text" class="form-control" ng-model="vm.recipeToAdd.category" name="category" placeholder="category" required></textarea>
+                    <span ng-show="recipeAddForm.category.$touched && recipeAddForm.category.$error.required"
+                          class="has-error help-block">Category is required!</span>
+                 </div>
                 <div style="padding:25px">
-                    <input type="submit" class="btn btn-default" value="Submit" />
+                    <input type="submit" class="btn btn-default" value="Submit" ng-disabled="recipeAddForm.$invalid" />
                     <a class="btn btn-primary" href="/edit" value="Edit">Edit</a>
                     <a class="btn btn-primary" href="/delete" value="Delete">Delete</a>
                 </div>

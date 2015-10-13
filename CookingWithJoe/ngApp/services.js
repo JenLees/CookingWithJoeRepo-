@@ -21,7 +21,7 @@ var CookingWithJoe;
             return RecipeService;
         })();
         Services.RecipeService = RecipeService;
-        angular.module('CookingWithJoe').service('RecipeService', RecipeService);
+        angular.module('CookingWithJoe').service('recipeService', RecipeService);
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         var ReviewService = (function () {
             function ReviewService($resource) {
@@ -42,7 +42,7 @@ var CookingWithJoe;
             return ReviewService;
         })();
         Services.ReviewService = ReviewService;
-        angular.module('CookingWithJoe').service('ReviewService', ReviewService);
+        angular.module('CookingWithJoe').service('reviewService', ReviewService);
     })(Services = CookingWithJoe.Services || (CookingWithJoe.Services = {}));
 })(CookingWithJoe || (CookingWithJoe = {}));
 ;

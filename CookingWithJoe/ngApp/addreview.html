@@ -1,24 +1,28 @@
 ﻿<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <form role="form" ng-submit="vm.saveReview()">
+            <form role="form" name="reviewAddForm" novalidate ng-submit="vm.saveReview()">
 
                 <div class="form-group">
 
                     <label for="productname" style="padding-top:18px">
                         Product Name:
                     </label>
-                    <input type="text" class="form-control" ng-model="vm.reviewToAdd.productname" id="productname" placeholder="product name" />
-                </div>
+                    <input type="text" class="form-control" ng-model="vm.reviewToAdd.productname" name="productname" placeholder="product name" required />
+                    <span ng-show="reviewAddForm.productname.$touched && reviewAddForm.productname.$error.required"
+                          class="has-error help-block">Product name is required!</span>
+                   </div>
 
                 <div>
                     <label for="productreview" style="padding-top:18px">
                        Your Review - tell us what you think:
                     </label>
-                    <textarea type="textarea" class="form-control" ng-model="vm.reviewToAdd.productreview" id="productreview" placeholder="your review"></textarea>
+                    <textarea type="textarea" class="form-control" ng-model="vm.reviewToAdd.productreview" name="productreview" placeholder="your review" required></textarea>
+                    <span ng-show="reviewAddForm.productreview.$touched && reviewAddForm.productreview.$error.required"
+                          class="has-error help-block">Product review is required!</span>
                 </div>
                 <div style="padding:25px">
-                    <input type="submit" class="btn btn-default" value="Submit" />
+                    <input type="submit" class="btn btn-default" value="Submit"  ng-disabled="recipeAddForm.$invalid" />
                     <a class="btn btn-primary" href="/editreview" value="Edit">Edit</a>
                     <a class="btn btn-primary" href="/deletereview" value="Delete">Delete</a>
                 </div>

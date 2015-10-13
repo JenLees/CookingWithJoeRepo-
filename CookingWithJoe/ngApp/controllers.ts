@@ -18,13 +18,7 @@
             ) { }
     }
 
-    angular.module('CookingWithJoe').controller('RecipeAddController', ['$http', function RecipeAddController($http) {
-        var vm = this;
-        $http.get('/api/recipes/').success(function (results) {
-            vm.reviews = results;
-        });
-    }]);
-}
+    angular.module('CookingWithJoe').controller('RecipeAddController', RecipeAddController);
 
     class RecipeEditController {
         public recipeToEdit
@@ -47,13 +41,8 @@
             this.recipeToEdit = recipeService.getRecipe(id);
         }
     }
-  
-    angular.module('CookingWithJoe').controller('RecipeEditController', ['$http', function RecipeEditController($http) {
-        var vm = this;
-        $http.get('/api/edit/').success(function (results) {
-            vm.reviews = results;
-        });
-    }]);
+
+    angular.module('CookingWithJoe').controller('RecipeEditController', RecipeEditController)
 
 
 
@@ -79,12 +68,7 @@
             this.recipeToDelete = recipeService.getRecipe(id);
         }
     }
-    angular.module('CookingWithJoe').controller('RecipeDeleteController', ['$http', function RecipeDeleteController($http) {
-        var vm = this;
-        $http.get('/api/delete/').success(function (results) {
-            vm.reviews = results;
-        });
-    }]);
+    angular.module('CookingWithJoe').controller('RecipeDeleteController', RecipeDeleteController);
 
 
     class RecipeListController {
@@ -94,12 +78,7 @@
             this.recipes = recipeService.listRecipes();
         }
     }
-    angular.module('CookingWithJoe').controller('RecipeListController', ['$http', function RecipeListController($http) {
-        var vm = this;
-        $http.get('/api/recipes/').success(function (results) {
-        vm.recipes = results;
-    });
-}]);
+    angular.module('CookingWithJoe').controller('RecipeListController', RecipeListController)
 
    
 
@@ -123,12 +102,7 @@
             ) { }
     }
 
-    angular.module('CookingWithJoe').controller('ReviewAddController', ['$http', function ReviewAddController($http) {
-        var vm = this;
-        $http.get('/api/reviews/').success(function (results) {
-            vm.reviews = results;
-        });
-    }]);
+    angular.module('CookingWithJoe').controller('ReviewAddController', ReviewAddController);
 
 
     class ReviewEditController {
@@ -177,12 +151,7 @@
         }
     }
     angular.module('CookingWithJoe').controller('ReviewDeleteController', ReviewDeleteController);
-    angular.module('CookingWithJoe').controller('RecipeDeleteController', ['$http', function RecipeDeleteController($http) {
-        var vm = this;
-        $http.get('/api/deletereview/').success(function (results) {
-            vm.reviews = results;
-        });
-    }]);
+
 
 
     class ReviewListController {
@@ -192,15 +161,10 @@
             this.reviews = reviewService.listReviews();
         }
     }
-    angular.module('CookingWithJoe').controller('ReviewListController', ['$http', function ReviewListController($http) {
-        var vm = this;
-        $http.get('/api/reviews/').success(function (results) {
-            vm.reviews = results;
-        });
-    }]);
+    angular.module('CookingWithJoe').controller('ReviewListController', ReviewListController);
     
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const authenticateURL = '/Token';
 
     class AccountController {
@@ -216,7 +180,7 @@
         }
 
         login() {
- 
+
             let data = "grant_type=password&username=" + this.username + "&password=" + this.password;
             this.$http.post(authenticateURL, data,
                 {
@@ -242,7 +206,6 @@
     }
 
 
-    angular.module('CookingWithJoe').controller('AccountController', AccountController)
+    angular.module('CookingWithJoe').controller('AccountController', AccountController);
 
-
- 
+};
