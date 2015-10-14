@@ -25,11 +25,14 @@
     </div>
     <div class="form-group">
         <label class="col-md-2 control-label" for="password">
-            Password:
+            Password (Must contain 6 or more characters and at least one special character, one number, uppercase, and lowercase letters):
                 <input class="form-control" ng-model="vm.newuser.password" name="password"
-                       type="password" ng-required="true" />
+                       type="password" ng-required="true" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})" />
                 <span ng-show="registerForm.password.$touched && registerForm.password.$error.required"
                       class="has-error help-block">Password is required!</span>
+            <span ng-show="registerForm.password.$touched && registerForm.passwrod.$error.pattern" class="has-error help-block">
+                Invalid password! Try again. 
+            </span>
         </label>
     </div>
     <div class="form-group">

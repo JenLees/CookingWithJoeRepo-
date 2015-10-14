@@ -350,6 +350,10 @@
     <Compile Include="Migrations\201510130606589_morestuff.Designer.cs">
       <DependentUpon>201510130606589_morestuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510140503146_claims.cs" />
+    <Compile Include="Migrations\201510140503146_claims.Designer.cs">
+      <DependentUpon>201510140503146_claims.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1526,6 +1530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510130606589_morestuff.resx">
       <DependentUpon>201510130606589_morestuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510140503146_claims.resx">
+      <DependentUpon>201510140503146_claims.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.addedCategory.resources" />
     <EmbeddedResource Include="obj\Debug\CookingWithJoe.Migrations.changedModel.resources" />
